@@ -1,0 +1,116 @@
+.app {
+  font-family: 'Arial', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.task-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.submitbtn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitbtn:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.task-item span {
+  flex-grow: 1; /* Makes the task text take up as much space as possible */
+  cursor: pointer;
+}
+
+.task-item input {
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.deletebtn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deletebtn:hover {
+  background-color: #c82333;
+}
+
+.editbtn{
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.editbtn:hover{
+  
+  background-color: #218838;
+
+}
+
+.savebtn{
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.savebtn:hover{
+  
+  background-color: #218838;
+
+}
