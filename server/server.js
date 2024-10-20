@@ -2,27 +2,25 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Task = require('./Task');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/todoapp');
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.7pyty.mongodb.net/`);
 
-// Get all tasks
 app.get('/api/tasks', async (req, res) => {
   const tasks = await Task.find();
   res.json(tasks);
 });
 
-// Add new task
 app.post('/api/tasks', async (req, res) => {
   const newTask = new Task({ text: req.body.text });
   await newTask.save();
   res.json(newTask);
 });
 
-// Update task
 app.put('/api/tasks/:id', async (req, res) => {
     const { text, completed } = req.body;
     const updatedTask = await Task.findByIdAndUpdate(req.params.id, { 
